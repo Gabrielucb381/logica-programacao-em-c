@@ -1,0 +1,15 @@
+Codigo do funcionario: 1010
+Cargo: Development
+Nome: Gabriel
+CPF: 1
+Data de nascimento: 1/6/1
+Telefone: 1
+Endereco: 1
+CEP: 1
+Local: 1
+Numero da casa: 1
+Bairro: 1
+Cidade: 1
+Estado: 1
+Senha do funcionario: 1
+

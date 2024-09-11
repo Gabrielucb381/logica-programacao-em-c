@@ -1,0 +1,149 @@
+#include <windows.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#define LIM 500
+char SENHA_ADMIN[20];
+void ler_indice_corrente();
+void ler_indice_poupanca();
+void sal_indice_corrente();
+void sal_indice_poupanca();
+void ler_indice_func();
+void sal_indice_func();
+void abertura_de_conta();
+void menu_principal();
+void conta_poupanca();
+void conta_corrente();
+void menu_funcionario();
+void rec_poup_agencia();
+void rec_poup_nconta();
+void rec_poup_nome();
+void rec_poup_cpf();
+void rec_poup_nasc();
+void rec_poup_tel();
+void rec_poup_end();
+void rec_poup_cep();
+void rec_poup_ncasa();
+void rec_poup_loc();
+void rec_poup_bairro();
+void rec_poup_cid();
+void rec_poup_est();
+void rec_poup_scli();
+void ler_agencia();;
+void gravar_dados_poup();
+#define SENHA_CORRETA "12012006"
+void rec_cor_agencia();
+void rec_cor_nconta();
+void rec_cor_nome();
+void rec_cor_cpf();
+void rec_cor_nasc();
+void rec_cor_tel();
+void rec_cor_end();
+void rec_cor_cep();
+void rec_cor_ncasa();
+void rec_cor_loc();
+void rec_cor_bairro();
+void rec_cor_cid();
+void rec_cor_est();
+void rec_cor_scli();
+void rec_cor_limconta();
+void rec_cor_datavenc();
+void gravar_dados_cor();
+void gravar_senha_adm();
+void ler_senha_adm();
+void consultar_conta();
+void rec_poup_saldo();
+void rec_cor_saldo();
+void consultar_cliente();
+void encerramento_de_conta();
+void consultar_dados();
+void cadastro_funcionario();
+void rec_cod();
+void rec_cargo();
+void rec_nome();
+void rec_cpf();
+void rec_data();
+void rec_tel();
+void rec_end();
+void rec_cep();
+void rec_loc();
+void rec_ncasa();
+void rec_bairro();
+void rec_cid();
+void rec_est();
+void rec_senha_func();
+void gravar_dados_func();
+void deposito_cliente();
+void menu_cliente();
+void alterar_poupanca();
+void alterar_dados();
+void salvar_dados_poup();
+void alterar_corrente();
+void limite_total();
+void salvar_dados_cor();
+void conta_senha_cliente();
+void extrato_bancario(int i, int tipo_conta, float valor, const char* operacao);
+void consultar_extrato();
+
+typedef struct{
+    int dia;
+    int mes;
+    int ano;
+}data;
+
+struct poup{    
+    int agencia;
+    char n_conta[20];
+    char nome[99];
+    char cpf[20];
+    data nasc;
+    char telefone[20];
+    char endereco[99];
+    char cep[20];
+    char local[20];
+    char n_casa[10];
+    char bairro[30];
+    char cidade[30];
+    char estado[25];
+    char senha_cliente[25];
+    float saldo;
+}CadPoup[250];
+
+struct cor{    
+    int agencia;
+    char n_conta[20];
+    char nome[99];
+    char cpf[20];
+    data nasc;
+    char telefone[20];
+    char endereco[99];
+    char cep[20];
+    char local[20];
+    char n_casa[10];
+    char bairro[30];
+    char cidade[30];
+    char estado[25];
+    char senha_cliente[25];
+    float lim_cont;
+    float lim_disp;
+    float lim_indis;
+    data venc;
+    float saldo;
+}CadCor[250];
+
+struct func{
+    char cod_func[20];
+    char cargo[25];
+    char nome[99];
+    char cpf[20];
+    data nasc;
+    char tel[20];
+    char endereco[99];
+    char cep[20];
+    char local[20];
+    char n_casa[10];
+    char bairro[30];
+    char cidade[30];
+    char estado[25];
+    char senha_func[30];
+}CadFunc[250];
