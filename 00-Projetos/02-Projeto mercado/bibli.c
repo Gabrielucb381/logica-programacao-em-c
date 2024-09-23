@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include <locale.h>
-void menuPrincipal();
 FILE* abrirArquivo(char *arquivo, char *modo);
-void lerArquivo();
+void lerArquivo(char *arquivo, char *modo);
 void gravarArquivo(char *arquivo, char *modo);
 void cadastrarProduto();
 void listarProdutos();
+void menuPrincipal();
+int quantCompra[50];
 
 struct
 {
